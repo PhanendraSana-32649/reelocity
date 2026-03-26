@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Reelocity</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reelocity</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-<div class="navbar">
+<div class="navbar glass">
   <h2>Reelocity</h2>
-  <div>
+
+  <div class="nav-links">
     <a href="#work">Work</a>
     <a href="#pricing">Pricing</a>
     <a href="#booking">Booking</a>
   </div>
-  <button onclick="openLogin()">Login</button>
+
+  <div class="nav-actions">
+    <button onclick="openLogin()">Login</button>
+    <button class="creator" onclick="openCreator()">Join Creator</button>
+  </div>
 </div>
 
 <!-- HERO -->
@@ -43,19 +50,19 @@
     <div class="card">
       <h3>Basic</h3>
       <p>₹699</p>
-      <p>2 Hours</p>
+      <p>2 hrs</p>
     </div>
 
     <div class="card highlight">
       <h3>Premium</h3>
       <p>₹1199</p>
-      <p>2 Hours</p>
+      <p>2 hrs</p>
     </div>
 
     <div class="card">
       <h3>Premium+</h3>
       <p>₹2499</p>
-      <p>2 Hours</p>
+      <p>2 hrs</p>
     </div>
   </div>
 
@@ -66,9 +73,9 @@
 
 <!-- SUBSCRIPTION -->
 <section class="container">
-  <h2>Monthly</h2>
+  <h2>Subscription</h2>
   <div class="card highlight">
-    ₹5499 / month (6 reels)
+    ₹5499/month → 6 Premium Reels
   </div>
 </section>
 
@@ -87,7 +94,7 @@
 
   <div class="card">
     <p>★★★★★</p>
-    <p>Super fast delivery 🔥</p>
+    <p>Amazing reels 🔥</p>
     <small>- Arjun</small>
   </div>
 </section>
@@ -96,20 +103,38 @@
 <section id="booking" class="container">
   <h2>Book Now</h2>
 
-  <input id="phone" placeholder="Phone number" />
+  <select id="plan">
+    <option>Basic</option>
+    <option>Premium</option>
+    <option>Premium+</option>
+  </select>
+
+  <input id="phone" placeholder="Phone" />
   <input id="date" type="date" />
 
   <button onclick="bookNow()">Confirm Booking</button>
 
-  <p id="message"></p>
+  <p id="msg"></p>
 </section>
 
-<!-- PRIVACY -->
-<section class="container">
-  <p class="note">
-    Your data is secure and encrypted.
-  </p>
-</section>
+<!-- LOGIN MODAL -->
+<div id="loginModal" class="modal">
+  <div class="modal-box">
+    <h3>Login</h3>
+    <input id="loginUser" placeholder="Enter name">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- CREATOR MODAL -->
+<div id="creatorModal" class="modal">
+  <div class="modal-box">
+    <h3>Creator Program</h3>
+    <input placeholder="Your Name">
+    <input placeholder="Phone">
+    <button>Apply</button>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
