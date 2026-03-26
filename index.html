@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Reelocity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Reelocity</h2>
+  <div>
+    <a href="#work">Work</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#booking">Booking</a>
+  </div>
+  <button onclick="openLogin()">Login</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>#fromshottoscrollready</h1>
+  <p>Shot on iPhone & Samsung 📱</p>
+  <button onclick="goToBooking()">Book Now</button>
+</section>
+
+<!-- WORK -->
+<section id="work" class="container">
+  <h2>Work</h2>
+  <div class="grid">
+    <div class="card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="container">
+  <h2>Pricing</h2>
+
+  <div class="pricing">
+    <div class="card">
+      <h3>Basic</h3>
+      <p>₹699</p>
+      <p>2 Hours</p>
+    </div>
+
+    <div class="card highlight">
+      <h3>Premium</h3>
+      <p>₹1199</p>
+      <p>2 Hours</p>
+    </div>
+
+    <div class="card">
+      <h3>Premium+</h3>
+      <p>₹2499</p>
+      <p>2 Hours</p>
+    </div>
+  </div>
+
+  <p class="note">
+    Revisions only within 2 hours. Extra charges may apply.
+  </p>
+</section>
+
+<!-- SUBSCRIPTION -->
+<section class="container">
+  <h2>Monthly</h2>
+  <div class="card highlight">
+    ₹5499 / month (6 reels)
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section class="container center">
+  <p>You book</p>
+  <p>We come</p>
+  <p>We shoot</p>
+  <p>We edit</p>
+  <p class="orange">We deliver instantly</p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="container">
+  <h2>Testimonials</h2>
+
+  <div class="card">
+    <p>★★★★★</p>
+    <p>Super fast delivery 🔥</p>
+    <small>- Arjun</small>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="container">
+  <h2>Book Now</h2>
+
+  <input id="phone" placeholder="Phone number" />
+  <input id="date" type="date" />
+
+  <button onclick="bookNow()">Confirm Booking</button>
+
+  <p id="message"></p>
+</section>
+
+<!-- PRIVACY -->
+<section class="container">
+  <p class="note">
+    Your data is secure and encrypted.
+  </p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
